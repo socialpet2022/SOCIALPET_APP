@@ -18,12 +18,18 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class CreateUser extends AppCompatActivity {
     EditText name,email,password;
     FirebaseAuth autentication;
     Button register;
     boolean esVisible;
+    DatabaseReference mroot;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +39,7 @@ public class CreateUser extends AppCompatActivity {
         password=findViewById(R.id.txtpass);
         register=findViewById(R.id.btncrear);
         autentication=FirebaseAuth.getInstance();
-
+    mroot= FirebaseDatabase.getInstance().getReference();
     }
     public void crear_user(View v){
             String nombre=name.getText().toString();
@@ -58,7 +64,13 @@ public class CreateUser extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(CreateUser.this,"usuario registrado correctamente",Toast.LENGTH_LONG).show();
+                        Map<String,Object> datosusuario=new HashMap<>();
+                        datosusuario.put("Nombre",nombre);
+                        datosusuario.put("Email",correo);
+                        datosusuario.put("Contraseña",pass);
+                        mroot.child("Usuarios").push().setValue(datosusuario);
                         Intent intent= new Intent(CreateUser.this,loginUser.class);
+
                         startActivity(intent);
                         finish();
                     }else{
