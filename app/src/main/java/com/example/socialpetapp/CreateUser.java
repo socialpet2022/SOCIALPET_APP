@@ -28,7 +28,7 @@ public class CreateUser extends AppCompatActivity {
     EditText name,email,password;
     FirebaseAuth autentication;
     Button register;
-    boolean esVisible;
+
     DatabaseReference mroot;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,12 +88,6 @@ public class CreateUser extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Intent intent=new Intent(CreateUser.this,Inicio.class);
-        startActivity(intent);
-        finish();
-    }
+
 
 }

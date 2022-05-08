@@ -19,12 +19,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.facebook.AccessToken;
-import com.facebook.CallbackManager;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
-import com.facebook.login.LoginManager;
-import com.facebook.login.LoginResult;
+
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -44,8 +39,8 @@ public class loginUser extends AppCompatActivity {
     EditText email,password;
     TextView forgot;
     FirebaseAuth autentication;
-    Button login,login_google,login_facebbok;
-    CallbackManager callbackManager;
+    Button login,login_google;
+
     private static final String TAG = "GOOGLEAUTH";
     GoogleSignInClient mGoogleSignInClient;
 
@@ -59,7 +54,6 @@ public class loginUser extends AppCompatActivity {
         login=findViewById(R.id.buttonlogin);
         autentication=FirebaseAuth.getInstance();
         login_google=findViewById(R.id.btnlogingoogle);
-        login_facebbok=findViewById(R.id.btnfacebook);
         forgot=findViewById(R.id.forgotpass);
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -67,31 +61,9 @@ public class loginUser extends AppCompatActivity {
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(loginUser.this,gso);
-        callbackManager = CallbackManager.Factory.create();
-        AccessToken accessToken=AccessToken.getCurrentAccessToken();
-        if (accessToken!=null && accessToken.isExpired()==false){
-            Intent intent=new Intent(loginUser.this,Inicio.class);
-            startActivity(intent);
-        }
-        LoginManager.getInstance().registerCallback(callbackManager,
-                new FacebookCallback<LoginResult>() {
-                    @Override
-                    public void onSuccess(LoginResult loginResult) {
-                        Intent intent=new Intent(loginUser.this,PantallaPrin.class);
-                        startActivity(intent);
-                        finish();
-                    }
 
-                    @Override
-                    public void onCancel() {
-                        // App code
-                    }
 
-                    @Override
-                    public void onError(FacebookException exception) {
-                        // App code
-                    }
-                });
+
     }
 
     public void loginuser(View v){
@@ -181,14 +153,8 @@ public class loginUser extends AppCompatActivity {
                     }
                 });
     }
-    public void l_facebook(View v){
-        LoginManager.getInstance().logInWithReadPermissions(loginUser.this, Arrays.asList("public_profile"));
-    }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        callbackManager.onActivityResult(requestCode, resultCode, data);
-        super.onActivityResult(requestCode, resultCode, data);
-    }
+
+
     public void register(View v){
         Intent intent=new Intent(loginUser.this,CreateUser.class);
         startActivity(intent);
@@ -199,11 +165,6 @@ public class loginUser extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Intent intent=new Intent(loginUser.this,Inicio.class);
-        startActivity(intent);
-        finish();
-    }
+
+
     }

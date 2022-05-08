@@ -19,24 +19,6 @@
         app:srcCompat="@drawable/pngwing_com__1_" />
 
     <Button
-        android:id="@+id/btnfacebook"
-        android:layout_width="313dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="#929292"
-        android:onClick="l_facebook"
-        android:text="INICIAR SESIÓN CON FACEBOOK"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnlogingoogle"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
         android:id="@+id/btnlogingoogle"
         android:layout_width="313dp"
         android:layout_height="55dp"
@@ -149,6 +131,8 @@
         android:layout_marginStart="98dp"
         android:layout_marginEnd="98dp"
         android:layout_marginBottom="16dp"
+        android:minHeight="48dp"
+        android:onClick="register"
         android:text="¿Aun no eres miembro? Registrate"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
