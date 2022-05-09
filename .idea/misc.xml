@@ -6,17 +6,26 @@
         <entry key="..\:/Users/adrian/.gradle/caches/transforms-3/892089b2244137d67f77bb1211996dbf/transformed/jetified-facebook-share-4.42.0/res/drawable/com_facebook_button_send_background.xml" value="0.1" />
         <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/font/sora.xml" value="0.3015625" />
         <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/activity_create_user.xml" value="0.22327898550724637" />
+        <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/activity_editperfil.xml" value="0.1265625" />
         <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/activity_forgot_password.xml" value="0.24954710144927536" />
         <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/activity_inicio.xml" value="0.264" />
         <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/activity_login_user.xml" value="0.24954710144927536" />
         <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/activity_main.xml" value="0.12447916666666667" />
         <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/activity_pantalla_prin.xml" value="0.24954710144927536" />
         <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/activity_perfil.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/activity_publications.xml" value="0.1265625" />
         <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/activity_userperfil.xml" value="0.22056159420289856" />
         <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/crearusuario.xml" value="0.12447916666666667" />
+        <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/fragment_buscar.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/fragment_inicio.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/fragment_notificaciones.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/fragment_perfil.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/fragment_post.xml" value="0.22056159420289856" />
         <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/inicio.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/loading.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/login.xml" value="0.1" />
+        <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/layout/navegacion.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/adrian/Desktop/SOCIALPETAPP/app/src/main/res/menu/barra_menu.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>

@@ -1,44 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Inicio">
 
-    <Button
-        android:id="@+id/btnini"
-        android:layout_width="313dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="660dp"
-        android:layout_marginEnd="40dp"
-        android:backgroundTint="#929292"
-        android:onClick="iniciar_sesion"
-        android:text="INICIAR SESIÓN"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btncrearuser"
-        android:layout_width="313dp"
-        android:layout_height="55dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="116dp"
-        android:backgroundTint="#929292"
-        android:onClick="crear_usuario"
-        android:text="CREAR USUARIO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="923dp"
-        android:layout_height="960dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.574"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62"
-        app:srcCompat="@drawable/thumb_1920_720980" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/thumb_1920_720980" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="194dp"
+        android:layout_marginTop="500dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnini"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginEnd="-5dp"
+            android:backgroundTint="#929292"
+            android:onClick="iniciar_sesion"
+            android:text="INICIAR SESIÓN" />
+
+        <Button
+            android:id="@+id/btncrearuser"
+            android:layout_width="398dp"
+            android:layout_height="58dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="116dp"
+            android:backgroundTint="#929292"
+            android:onClick="crear_usuario"
+            android:text="CREAR USUARIO" />
+
+    </LinearLayout>
+
+</RelativeLayout>

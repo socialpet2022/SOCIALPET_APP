@@ -4,6 +4,8 @@
     <string name="facebook_app_id">1022854871994465</string>
 
     <string name="facebook_client_token">1f831587a8f44d11e02ac820096cbec0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

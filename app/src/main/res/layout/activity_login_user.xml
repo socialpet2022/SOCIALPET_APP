@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".loginUser">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="200dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="sans-serif"
+        android:text="Iniciar sesion"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="120dp"
@@ -18,142 +34,112 @@
         app:layout_constraintVertical_bias="0.084"
         app:srcCompat="@drawable/pngwing_com__1_" />
 
-    <Button
-        android:id="@+id/btnlogingoogle"
-        android:layout_width="313dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="112dp"
-        android:backgroundTint="#929292"
-        android:drawableLeft="@drawable/googleg_standard_color_18"
-        android:onClick="l_google"
-        android:text="INICIAR SESION CON GOOGLE"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/txtcorreo"
-        android:layout_width="334dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="39dp"
-        android:ems="10"
-        android:hint="Introduce tu email"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="99dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="204dp"
-        android:layout_marginEnd="277dp"
-        android:backgroundTint="#000000"
-        android:fontFamily="sans-serif"
-        android:text="Email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="98dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="277dp"
-        android:layout_marginBottom="4dp"
-        android:fontFamily="sans-serif"
-        android:text="Contraseña"
-        app:layout_constraintBottom_toTopOf="@+id/txtpassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/txtpassword"
-        android:layout_width="333dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="Introduce tu contraseña"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/forgotpass"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="126dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="200dp"
-        android:fontFamily="sans-serif"
-        android:text="Iniciar sesion"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtcorreo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/buttonlogin"
-        android:layout_width="313dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="200dp"
-        android:backgroundTint="#929292"
-        android:onClick="loginuser"
-        android:text="INICIAR SESIÓN"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="98dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginBottom="16dp"
-        android:minHeight="48dp"
-        android:onClick="register"
-        android:text="¿Aun no eres miembro? Registrate"
-        android:textSize="20sp"
+    <LinearLayout
+        android:layout_width="414dp"
+        android:layout_height="539dp"
+        android:layout_marginStart="2dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/forgotpass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="220dp"
-        android:layout_marginEnd="133dp"
-        android:minHeight="48dp"
-        android:onClick="forgotpassword"
-        android:text="¿Olvidaste tu contraseña?"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonlogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.453"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="403dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="277dp"
+            android:backgroundTint="#000000"
+            android:fontFamily="sans-serif"
+            android:text="Email"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/txtcorreo"
+            android:layout_width="403dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="39dp"
+            android:ems="10"
+            android:hint="Introduce tu email"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="403dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="277dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="sans-serif"
+            android:text="Contraseña"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/txtpassword"
+            android:layout_width="403dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="43dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="Introduce tu contraseña"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/forgotpass"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginEnd="133dp"
+            android:minHeight="48dp"
+            android:onClick="forgotpassword"
+            android:text="¿Olvidaste tu contraseña?"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonlogin"
+            android:layout_width="403dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="49dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#929292"
+            android:onClick="loginuser"
+            android:text="INICIAR SESIÓN" />
+
+        <Button
+            android:id="@+id/btnlogingoogle"
+            android:layout_width="403dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#929292"
+            android:drawableLeft="@drawable/googleg_standard_color_18"
+            android:onClick="l_google"
+            android:text="INICIAR SESION CON GOOGLE"
+            tools:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:minHeight="48dp"
+            android:onClick="register"
+            android:text="¿Aun no eres miembro? Registrate"
+            android:textSize="20sp" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

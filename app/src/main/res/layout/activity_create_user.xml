@@ -27,104 +27,103 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pngwing_com__1_" />
 
-    <TextView
-        android:id="@+id/textname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="224dp"
-        android:fontFamily="sans-serif"
-        android:text="Nombre"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="511dp"
+        android:layout_marginStart="2dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <EditText
-        android:id="@+id/txtemail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="316dp"
-        android:ems="10"
-        android:hint="Introduce tu email"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="DuplicateClickableBoundsCheck" />
+        <TextView
+            android:id="@+id/textname"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="sans-serif"
+            android:text="Nombre"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="512dp"
-        android:minHeight="48dp"
-        android:onClick="ini"
-        android:text="¿Ya eres usuario? Inicia sesion"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/txtnombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="Introduce tu nombre"
+            android:inputType="textVisiblePassword|textPersonName"
+            android:minHeight="32dp"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
-    <TextView
-        android:id="@+id/textpass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="392dp"
-        android:fontFamily="sans-serif"
-        android:text="Contraseña"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textemail"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#000000"
+            android:fontFamily="sans-serif"
+            android:text="Email"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/textemail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="296dp"
-        android:backgroundTint="#000000"
-        android:fontFamily="sans-serif"
-        android:text="Email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/txtemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:hint="Introduce tu email"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            tools:ignore="DuplicateClickableBoundsCheck" />
 
-    <EditText
-        android:id="@+id/txtnombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="240dp"
-        android:ems="10"
-        android:hint="Introduce tu nombre"
-        android:inputType="textVisiblePassword|textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textpass"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:text="Contraseña"
+            android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/txtpass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        <EditText
+            android:id="@+id/txtpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
 
-        android:layout_marginTop="412dp"
-        android:ems="10"
-        android:hint="introduce contraseña"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="introduce contraseña"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
 
-    <Button
-        android:id="@+id/btncrear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="472dp"
-        android:backgroundTint="#929292"
-        android:onClick="crear_user"
-        android:text="CREAR USUARIO"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btncrear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="#929292"
+            android:onClick="crear_user"
+            android:text="CREAR USUARIO" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:minHeight="48dp"
+            android:onClick="ini"
+            android:text="¿Ya eres usuario? Inicia sesion"
+            android:textSize="20sp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

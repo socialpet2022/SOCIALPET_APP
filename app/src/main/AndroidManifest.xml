@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SOCIALPETAPP">
         <activity
-            android:name=".editperfil"
+            android:name=".publications"
             android:exported="false" />
         <activity
             android:name=".Userperfil"

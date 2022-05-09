@@ -3,6 +3,7 @@ package com.example.socialpetapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -28,7 +29,7 @@ public class CreateUser extends AppCompatActivity {
     EditText name,email,password;
     FirebaseAuth autentication;
     Button register;
-
+ProgressDialog cargar;
     DatabaseReference mroot;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class CreateUser extends AppCompatActivity {
         email=findViewById(R.id.txtemail);
         password=findViewById(R.id.txtpass);
         register=findViewById(R.id.btncrear);
+        cargar=new ProgressDialog(this);
         autentication=FirebaseAuth.getInstance();
     mroot= FirebaseDatabase.getInstance().getReference();
     }
@@ -45,7 +47,9 @@ public class CreateUser extends AppCompatActivity {
             String nombre=name.getText().toString();
             String correo=email.getText().toString();
             String pass=password.getText().toString();
-            if (TextUtils.isEmpty(nombre)){
+            cargar.setMessage("Por favor espere");
+            cargar.show();
+    if (TextUtils.isEmpty(nombre)){
                 name.setError("Escribe el nombre");
                 return;
             }else if(TextUtils.isEmpty(correo)){
@@ -63,12 +67,17 @@ public class CreateUser extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(CreateUser.this,"usuario registrado correctamente",Toast.LENGTH_LONG).show();
+
                         Map<String,Object> datosusuario=new HashMap<>();
                         datosusuario.put("Nombre",nombre);
                         datosusuario.put("Email",correo);
                         datosusuario.put("Contraseña",pass);
+                        datosusuario.put("id",autentication.getCurrentUser().getUid());
                         mroot.child("Usuarios").push().setValue(datosusuario);
+                                cargar.dismiss();
+                        Toast.makeText(CreateUser.this,"usuario registrado correctamente",Toast.LENGTH_LONG).show();
+
+
                         Intent intent= new Intent(CreateUser.this,loginUser.class);
 
                         startActivity(intent);
