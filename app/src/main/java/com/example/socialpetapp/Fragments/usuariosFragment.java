@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import com.example.socialpetapp.R;
 
 
-public class BuscarFragment extends Fragment {
+public class usuariosFragment extends Fragment {
 
 
     @Override

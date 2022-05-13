@@ -3,16 +3,18 @@
     <item android:id="@+id/home"
         android:title=""
         android:icon="@drawable/ic_home"/>
-    <item android:id="@+id/search"
-        android:title=""
-        android:icon="@drawable/ic_search"/>
+    <item
+        android:id="@+id/users"
+        android:icon="@drawable/fui_ic_anonymous_white_24dp"
+        android:title="" />
     <item android:id="@+id/add"
         android:title=""
         android:icon="@drawable/ic_add"/>
-    <item android:id="@+id/person"
-        android:title=""
-        android:icon="@drawable/ic_person"/>
-    <item android:id="@+id/heart"
+    <item
+        android:id="@+id/person"
+        android:icon="@drawable/ic_person"
+        android:title="" />
+    <item android:id="@+id/chat"
         android:title=""
         android:icon="@drawable/ic_love"/>
 
