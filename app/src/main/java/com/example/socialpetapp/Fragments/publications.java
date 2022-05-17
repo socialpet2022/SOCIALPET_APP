@@ -93,14 +93,14 @@ public class publications extends Fragment {
         pd.setCanceledOnTouchOutside(false);
         Intent intent = getActivity().getIntent();
         // Retrieving the user data like name ,email and profile pic using query
-        databaseReference = FirebaseDatabase.getInstance().getReference("Users");
-        Query query = databaseReference.orderByChild("email").equalTo(email);
+        databaseReference = FirebaseDatabase.getInstance().getReference("Usuarios");
+        Query query = databaseReference.orderByChild("Email").equalTo(email);
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    name = dataSnapshot1.child("name").getValue().toString();
-                    email = "" + dataSnapshot1.child("email").getValue();
+                    name = dataSnapshot1.child("Nombre").getValue().toString();
+                    email = "" + dataSnapshot1.child("Email").getValue();
                     dp = "" + dataSnapshot1.child("image").getValue().toString();
                 }
             }
@@ -119,6 +119,7 @@ public class publications extends Fragment {
         image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 showImagePicDialog();
             }
         });
@@ -305,7 +306,7 @@ public class publications extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (resultCode == getActivity().RESULT_OK) {
-            if (requestCode == IMAGEPICK_GALLERY_REQUEST) {
+            if (requestCode == IMAGEPICK_GALLERY_REQUEST ) {
                 imageuri = data.getData();
                 image.setImageURI(imageuri);
             }

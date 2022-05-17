@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -67,18 +68,19 @@ ProgressDialog cargar;
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-
+                        String user = autentication.getCurrentUser().getUid();
                         Map<String,Object> datosusuario=new HashMap<>();
                         datosusuario.put("Nombre",nombre);
                         datosusuario.put("Email",correo);
                         datosusuario.put("Contraseña",pass);
-                        datosusuario.put("id",autentication.getCurrentUser().getUid());
-                        mroot.child("Usuarios").push().setValue(datosusuario);
+                        datosusuario.put("image","");
+                        FirebaseDatabase.getInstance().getReference("Usuarios/"+FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(datosusuario);
+
                                 cargar.dismiss();
                         Toast.makeText(CreateUser.this,"usuario registrado correctamente",Toast.LENGTH_LONG).show();
 
 
-                        Intent intent= new Intent(CreateUser.this,loginUser.class);
+                        Intent intent= new Intent(CreateUser.this,fotoperfil.class);
 
                         startActivity(intent);
                         finish();

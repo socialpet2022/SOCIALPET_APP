@@ -32,8 +32,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class loginUser extends AppCompatActivity {
     EditText email,password;
@@ -85,10 +88,31 @@ public class loginUser extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    FirebaseUser user = autentication.getCurrentUser();
+                    if (task.getResult().getAdditionalUserInfo().isNewUser()) {
+                        String email = user.getEmail();
+                        String uid = user.getUid();
+                        HashMap<Object, String> hashMap = new HashMap<>();
+                        hashMap.put("email", email);
+                        hashMap.put("id", uid);
+                        hashMap.put("Nombre", "");
+                        hashMap.put("onlineStatus", "online");
+                        hashMap.put("typingTo", "noOne");
+
+
+                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+                        // store the value in Database in "Users" Node
+                        DatabaseReference reference = database.getReference("Usuarios");
+
+                        // storing the value in Firebase
+                        reference.child(uid).setValue(hashMap);
+                    }
                     Toast.makeText(loginUser.this,"usuario ha iniciado sesion",Toast.LENGTH_LONG).show();
                     Intent intent=new Intent(loginUser.this,PantallaPrin.class);
                     startActivity(intent);
                     finish();
+
 
                 }else{
                     Toast.makeText(loginUser.this,"usuario falllo o no esta registrado",Toast.LENGTH_LONG).show();
@@ -97,6 +121,7 @@ public class loginUser extends AppCompatActivity {
         });
 
     }
+
     private Boolean isValidEmail(CharSequence target){
         return(!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches());
     }
